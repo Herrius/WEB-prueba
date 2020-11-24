@@ -1,0 +1,253 @@
+*,*::before,*::after{
+  box-sizing:border-box;
+}
+/* Lista de elementos */
+body{
+    display:grid;
+    min-height:100vh;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows:repeat(5,1fr) 6.5em;
+  }
+  .header{
+    background:#0455BF;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    height: 4.5em;
+  }
+  .main{
+    background:hsl(0,80%,100%);
+    grid-column: 1/span 12;
+    grid-row:1/span 5;
+    grid-template-rows:repeat(4,1fr);
+  }
+  .end{
+    background:hsl(214, 100%, 10%);
+    grid-row:6;
+    grid-column: 1/span 12;
+  }
+/* Lista de elementos de la cabecera */
+  .photo{
+      grid-column: 2/span 3;
+      display: grid;
+      grid-template-areas: "a a";
+  }
+  
+  .menu{
+    grid-column: 7/span 5;
+    display: flex;
+    margin: 0;
+    align-content: center;
+
+  }
+  .menu-item {
+    height: 100%;
+    padding:0 0.5em;
+    display: flex;
+    align-items: center;
+  }
+  .menu-item:hover{
+    background: #00000040;
+  }
+  .format{
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+
+  .format-text{
+    color: #ffffff;
+    font-family:'Source Serif Pro',serif;
+    font-weight: 400;
+    margin: 0 0.50em;
+  }  
+
+  .myphoto{
+    padding: 0.35em 0 0 0;
+    height: 3.5em;
+    border-radius: 50%;
+  }
+  .menu-item{
+    text-decoration: none;
+  }
+  .presentation{
+    padding: 0 0.1px;
+    height: inherit;
+    grid-row: 1;
+  }
+  .presetation-img{
+    width: 99vw;
+    object-fit: cover;
+
+
+  }
+  .presentation-text{
+    position: absolute;
+    z-index: 0;
+    height: 115%;
+    width: 99vw;
+    display: flex;
+    font-family: 'Source Serif Pro',serif;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 2em;
+    color: #ffffff;
+    background-color: #00000040;
+  }
+  .author{
+    grid-column: 2/span 2;
+    margin-left: -2.5em;
+  }
+  .me{
+    margin: 0;
+    padding-top: 0.25em;
+  }
+  .motto{
+    margin: 0;
+  }
+  /* Footer de la pagina web */
+  .end{
+    display:grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+  .credits{
+    display: grid;
+    grid-column: 6/span 2;
+    justify-content: center;
+  }
+  .contact{
+    margin: 0.5em 0 0;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+    color: #ffffff;
+    font-family: 'Source Serif Pro',serif;
+    font-weight: 700;
+  }
+  .icon-footer{
+    margin: 0;
+  }
+  .container{
+    justify-content: center;
+    display: flex;
+  }
+  .fa {
+    padding: 0.75em 0;
+    width: 2.5em;
+    text-align: center;
+    text-decoration: none;
+    margin: 0.1px 2px;
+    border-radius: 50%;
+  }
+  .fa:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-github {
+  background: #2c4762;
+  color: white;
+}
+/* Seccion de juegos de mesa */
+.boardgame-title{
+  font-size: 3em;
+  font-family:'Source Serif Pro',serif;
+  font-weight: 700;
+}
+.boardgame{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.boardgamelst{
+  display: flex;
+  margin: 0 3.5rem;
+}
+.card-title{
+  font-size: 2em;
+  font-family: 'Source Serif Pro',serif;
+  font-weight: 600;
+}
+.card-description{
+  font-size: 1.2em;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  line-height: 150%;
+}
+.card-view{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.lstimg{
+  width: 12rem;
+}
+.card{
+  margin-left: 5rem;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.card-title{
+  margin: 0;
+  padding-top: 1rem;
+}
+.card{
+  border-radius: 1rem;
+  background-color: hsl(210,100%,95%);
+  padding: 1em;
+}
+/* seccion de juegos de rol */
+.roleplaying{
+  display: grid;
+  margin: 2rem 3.5rem 0;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr) ;
+}
+.banner-img{
+  width: 100%;
+  grid-column: span 1;
+}
+.container-text{
+  grid-column: 2;
+}
+.role-imagen{
+  width: 100%;
+}
+.banner-title{
+  font-size: 3em;
+  font-family: 'Source Serif Pro',serif;
+  font-weight: 700;
+  text-align: right;
+}
+.banner-text{
+  font-size: 1.25em;
+  font-family: 'Source Serif Pro', serif;
+  font-weight: 400;
+  text-align: right;
+  padding-left: 5rem;
+}
+/* seccion de videojuegos */
+.knowledge{
+  display: grid;
+  margin: 0 3.5rem;
+  align-items: center;
+  grid-template-columns: repeat(2,1fr) ;
+}
+.space-right{
+  text-align: left;
+  padding-right: 5rem;
+  padding-left: 0;
+}
+.container-knowledge{
+  grid-column: span 1;
+}
